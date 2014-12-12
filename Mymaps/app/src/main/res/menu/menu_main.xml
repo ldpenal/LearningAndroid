@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main">
+
+    <item
+        android:id="@+id/itSatellite"
+        android:title="@string/strSatellite"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itNormal"
+        android:title="@string/strNormal"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itHybrid"
+        android:title="@string/strHybrid"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itTerrain"
+        android:title="@string/strTerrain"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itNone"
+        android:title="@string/strNone"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itAddMarker"
+        android:title="@string/strAddMarker"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itRemoveMarker"
+        android:title="@string/strRemoveMarker"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itPoly"
+        android:title="@string/strPoly"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itStreetView"
+        android:title="@string/strStreeView"
+        android:showAsAction="ifRoom" />
+</menu>

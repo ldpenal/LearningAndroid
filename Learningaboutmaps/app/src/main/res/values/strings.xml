@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learning about maps</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--String for map types -->
+    <string name="noneMap">None</string>
+    <string name="satelliteMap">Satellite</string>
+    <string name="normalMap">Normal</string>
+    <string name="hybridMap">Hybrid</string>
+    <string name="terrainMap">Terrain</string>
+
+</resources>

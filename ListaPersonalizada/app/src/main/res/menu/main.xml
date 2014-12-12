@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main" >
+
+    <item
+        android:id="@+id/addRegister"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/add"
+        android:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom">
+        </item>
+
+    <item
+        android:id="@+id/option1"
+        android:title="@string/option1"
+        android:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:id="@+id/option2"
+        android:title="@string/option2"
+        android:showAsAction="ifRoom">
+    </item>
+</menu>

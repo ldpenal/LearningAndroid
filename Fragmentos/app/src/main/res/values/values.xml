@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="my_second_fragment" type="layout">
+        @layout/my_second_fragment_grande
+    </item>
+</resources>

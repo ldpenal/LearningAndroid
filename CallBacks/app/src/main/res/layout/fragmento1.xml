@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/mBackGround"
+    tools:context="fragments.Fragmento1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/toF2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/separator"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_marginRight="@dimen/space"
+            android:layout_marginTop="@dimen/space"
+            android:background="@color/buttonColors"
+            android:paddingLeft="@dimen/space"
+            android:paddingRight="@dimen/space"
+            android:text="@string/goF2" />
+
+        <Button
+            android:id="@+id/toF3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_marginRight="@dimen/space"
+            android:background="@color/buttonColors"
+            android:text="@string/goF3" />
+
+    </LinearLayout>
+
+</FrameLayout>

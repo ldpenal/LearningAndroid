@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"></style>
+
+    <color name="greenC">#999966</color>
+    <color name="mBackGround">#CCFF66</color>
+    <color name="mBack2">#FFFF66</color>
+    <color name="buttonColors">#99D6FF</color>
+
+</resources>

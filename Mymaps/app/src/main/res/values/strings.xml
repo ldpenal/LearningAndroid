@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="API_KEY">AIzaSyDS4fRCJn0Sar1Nrg9OGYYbTo6vktCWeGw</string>
+
+    <string name="app_name">My maps</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="strHybrid">Hybrid map</string>
+    <string name="strNone">None map</string>
+    <string name="strSatellite">Satellite map</string>
+    <string name="strTerrain">Terrain map</string>
+    <string name="strNormal">Normal map</string>
+
+    <string name="strAddMarker">Add marker</string>
+    <string name="strRemoveMarker">Remove marker</string>
+    <string name="strPoly">PolyLine</string>
+    <string name="strStreeView">Street view</string>
+
+</resources>

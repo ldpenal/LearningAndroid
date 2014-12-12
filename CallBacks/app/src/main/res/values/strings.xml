@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CallBacks</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="backText">Go back</string>
+    <string name="goF2">Got to fragment 2</string>
+    <string name="goF3">Got to fragment 3</string>
+
+    <string name="helloWorld">Hello world</string>
+    <string name="holaMundo">Hola mundo</string>
+
+</resources>
