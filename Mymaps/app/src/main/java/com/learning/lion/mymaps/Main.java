@@ -1,5 +1,8 @@
 package com.learning.lion.mymaps;
 
+/**
+ * Android.
+ */
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentManager;
@@ -9,9 +12,18 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * Location classes from android.
+ */
+import android.location.Geocoder;
+import android.location.Address;
+
+
+/**
+ * Google maps API version 2.
+ */
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
-import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,6 +38,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+
+import java.io.IOException;
+import java.util.List;
 
 public class Main
         extends Activity
@@ -49,11 +64,15 @@ public class Main
     private StreetViewPanorama streetViewPanorama;
     private StreetViewPanoramaFragment streetViewPanoramaFragment;
 
-    private LocationClient locationClient;
+    //private LocationClient locationClient;
     private LocationRequest locationRequest;
 
+    // Flags to use markers;
     private boolean removeMarker = false;
     private boolean addMarker = false;
+
+    // Searching for some places.
+    private Geocoder geocoder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +84,22 @@ public class Main
         loadMap();
         addStreetView();
         loadLocationTools();
+
+        loadGeocoders();
+    }
+
+    public void loadGeocoders() {
+        geocoder = new Geocoder(this);
+        try {
+            List<Address> list = geocoder.getFromLocationName("Subway", 10000);
+            Log.d("ldpenal", "-----Size:  " + list.size() + "-----");
+            //Thread.sleep(10000);
+            for(Address auxiliar : list) {
+                Log.d("ldpenal", auxiliar.getAddressLine(0) + ";\t" + auxiliar.getAddressLine(1));
+            }
+        } catch (IOException e) {
+            Log.e("ldpenal", "ERROR");
+        }
     }
 
     protected void loadLocationTools() {
@@ -73,10 +108,10 @@ public class Main
         locationRequest.setSmallestDisplacement(0.5f);
         locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 
-        locationClient = new LocationClient(this, this, this);
+        //locationClient = new LocationClient(this, this, this);
 
         try {
-            locationClient.connect();
+            //locationClient.connect();
         } catch (Exception e) {
             Log.d("-----", e.getMessage());
         }
@@ -211,10 +246,10 @@ public class Main
         if (streetViewPanorama == null) {
             streetViewPanorama = streetViewPanoramaFragment.getStreetViewPanorama();
         }
-
+/*
         if (locationClient.isConnected()) {
             locationClient.requestLocationUpdates(locationRequest, this);
-        }
+        }*/
     }
 
     @Override
@@ -261,7 +296,7 @@ public class Main
     @Override
     public void onConnected(Bundle bundle) {
         showMessage("Ok connection");
-        locationClient.requestLocationUpdates(locationRequest, this);
+        //locationClient.requestLocationUpdates(locationRequest, this);
     }
 
     @Override
@@ -295,6 +330,6 @@ public class Main
     @Override
     protected void onPause() {
         super.onPause();
-        locationClient.removeLocationUpdates(this);
+        //locationClient.removeLocationUpdates(this);
     }
 }
